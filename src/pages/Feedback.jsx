@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+
 
 export default function Feedback() {
   const [formData, setFormData] = useState({
@@ -21,10 +23,13 @@ export default function Feedback() {
     setFormData({ name: '', email: '', message: '' });
   };
 
+  const { t } = useTranslation();
+
+
   return (
     <form className='form' onSubmit={handleSubmit}>
       <label>
-        Имя:
+        {t('name')}
         <input type="text" name="name" value={formData.name} onChange={handleChange} required />
       </label>
       <label>
@@ -32,10 +37,10 @@ export default function Feedback() {
         <input type="email" name="email" value={formData.email} onChange={handleChange} required />
       </label>
       <label>
-        Сообщение:
+        {t('message')}:
         <textarea name="message" value={formData.message} onChange={handleChange} required />
       </label>
-      <button type="submit">Отправить</button>
+      <button type="submit">{t('send')}</button>
     </form>
   );
 }

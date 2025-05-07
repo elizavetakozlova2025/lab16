@@ -1,3 +1,8 @@
+import { useTranslation } from 'react-i18next';
+
+
 export default function About() {
-  return <div className="contactsContainer"><h1>Южный федеральный университет</h1></div>;
+  const { t } = useTranslation();
+
+  return <div className="contactsContainer"><h1>{t('university')}</h1></div>;
 }

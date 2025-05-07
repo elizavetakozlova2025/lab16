@@ -3,7 +3,9 @@ import News from '../pages/News';
 import About from '../pages/About';
 import Feedback from '../pages/Feedback';
 import Services from '../pages/Services';
+
 import NotFound from '../pages/NotFound';
+import Contacts from '../pages/Contacts';
 
 export default function Article() {
   return (
@@ -13,6 +15,7 @@ export default function Article() {
         <Route path="/about" element={<About />} />
         <Route path="/feedback" element={<Feedback />} />
         <Route path="/services" element={<Services />} />
+        <Route path="/contacts" element={<Contacts />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </article>

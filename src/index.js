@@ -4,7 +4,7 @@ import App from './App';
 import "./css/reset.css"
 import "./css/style.css"
 import { BrowserRouter } from 'react-router-dom';
-
+import './languages/i18n';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
