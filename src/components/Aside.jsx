@@ -1,6 +1,6 @@
 export default function Aside() {
     return (
-      <aside>
+      <aside className="asideContainer">
         Елизавета Козлова
       </aside>
     );
